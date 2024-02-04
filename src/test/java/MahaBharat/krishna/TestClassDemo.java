@@ -18,7 +18,7 @@ public class TestClassDemo {
 	@BeforeTest
 	public void setUp() {
 		WebDriverManager.firefoxdriver().setup();
-		 driver = new FirefoxDriver();
+		driver = new FirefoxDriver();
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 	}
@@ -27,6 +27,7 @@ public class TestClassDemo {
 	public void testApp() {
 		driver.get("https://www.google.com");
 		driver.getTitle();
+		System.out.println("CI Pipe");
 	}
 
 	@AfterTest
